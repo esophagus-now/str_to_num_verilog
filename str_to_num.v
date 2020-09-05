@@ -7,10 +7,9 @@
 
 module str_to_num(clk, s_dtm, s_vld, s_rdy,
 					   n_dtm, n_vld, n_rdy);
-input wire clk;
+input clk;
 input [7:0]       s_dtm; input  s_vld; output s_rdy;
 output reg [31:0] n_dtm; output n_vld; input  n_rdy;
-initial n_dtm = 0;
 reg [1:0] state = `WAIT_FIRST_DIGIT;
 wire s_isdigit = (s_dtm >= "0" && s_dtm <= "9");
 wire s_handshake = (s_vld && s_rdy);

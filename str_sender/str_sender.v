@@ -4,8 +4,8 @@
 module str_sender(clk, s_dtm, s_vld, s_rdy);
 input clk;
 output [7:0] s_dtm; output s_vld; input s_rdy;
-wire [35*8 -1:0] str = {"22/11/1996: ",
-                        "0xBED4BABE = 3201612478"};
+wire [35*8 -1:0] str = {"19/08/2005: ",
+                        "0x5F3759DF = 1597463007"};
 reg [5:0] i = 0;
 always @(posedge clk)
 	if (s_vld && s_rdy)
