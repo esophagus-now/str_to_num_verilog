@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`default_nettype none
+`default_nettype wire
 
 `define WAIT_FIRST_DIGIT 2'd0
 `define READ_DIGITS 2'd1
